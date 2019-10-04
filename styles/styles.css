@@ -1,0 +1,242 @@
+.main {
+    border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+}
+
+.main-header {
+    line-height: 1;
+    background-color: #fbfbfb;
+}
+
+.main-header-title {
+    font-size: 2.25rem;
+}
+
+.main-navbar {
+    height: 3.0rem;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 4px double #e5e5e5;
+    background-color: #f5f5f5;
+}
+
+.main-navbar-item {
+    height: 3.0rem;
+    line-height: 3.0rem;
+    text-align: center;
+    border: 1px solid #e5e5e5;
+    background-color: #f5f5f5;
+}
+
+.main-navbar-item:hover {
+    text-decoration: none;
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+.main-footer {
+    background-color: #f9f9f9;
+    text-align: center;
+    padding: 2.5rem 0;
+    border-top: 1px solid #e5e5e5;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 2.00rem;
+    padding: 2.0rem 0;
+}
+
+.games-container {
+}
+
+.games-row {
+    padding: 1.0rem 0;
+}
+
+.games-row+.games-row {
+    border-top: 2px solid #c5c5c5;
+}
+
+.games-name {
+    display: inline-block;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.games-meta {
+    text-align: center;
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+.games-brief {
+    text-align: left;
+    font-size: 1.0rem;
+}
+
+.games-screenshot {
+    width: 100%;
+    height: auto;
+}
+
+.game-gallery {
+    margin: auto;
+    width: 100%;
+    max-width: 800px;
+}
+
+.game-gallery-large-screenshot {
+    width: 100%;
+}
+
+.game-gallery-screenshot {
+    width: 100%;
+    max-height: 200px;
+    cursor: pointer;
+}
+
+.game-embedded-fail-strip,.game-embedded-play-strip {
+    position: relative;
+    overflow: hidden;
+}
+
+.game-embedded-fail-strip>img,.game-embedded-play-strip>img {
+    width: 100%;
+    height: auto;
+    transform: scale(1.05);
+    filter: blur(4px) brightness(150%) saturate(50%);
+}
+
+.game-embedded-fail-strip>.btn,.game-embedded-play-strip>.btn {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background: #13e800;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 1.2rem;
+    width: 100%;
+    height: 20%;
+    max-height: 5.0rem;
+    min-height: 4.0rem;
+    top: 50%;
+    left: 50%;
+    border-radius: 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.game-embedded-fail-strip>.btn {
+    background: #e81300;
+}
+
+.game-embedded-fail-strip>.btn:hover,.game-embedded-play-strip>.btn:hover {
+    background: #10c800;
+    color: #FFFFFF;
+}
+
+.game-embedded-fail-strip>.btn:hover {
+    background: #c81000;
+}
+
+.game-embedded-play-strip>.btn>img {
+    height: 80%;
+    padding-right: 2.0rem;
+    padding-left: 2.0rem;
+    width: auto;
+}
+
+.game-embedded {
+    display: flex;
+    width: 100%;
+    box-shadow: 0px 0px 0px 8px #F5F5F5;
+    background-color: #FFFFFF;
+}
+
+.game-embedded-iframe {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.game-embedded-fail-message,.game-embedded-fail-message-details {
+    display: inline-block;
+    color: #FFFFFF;
+    vertical-align: middle;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.game-embedded-fail-message-details {
+    font-size: 0.8rem;
+}
+
+.game-name-small {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.game-jam-name {
+    text-align: center;
+    font-size: 1.0rem;
+    font-style: italic;
+}
+
+.game-date {
+    text-align: center;
+    font-size: 1.0rem;
+    font-style: italic;
+}
+
+.game-brief {
+    width: 90%;
+}
+
+.game-instructions {
+    width: 90%;
+}
+
+.game-developers-container {
+    text-align: center;
+}
+
+.game-developers-container .game-developers-item {
+    font-style: italic;
+}
+
+.game-developers-container .game-developers-separator:last-child {
+    display: none;
+}
+
+.developer-name {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.developer-portrait {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.developer-website {
+}
+
+.developer-website:link {
+    color: #202020;
+}
+
+.developer-website:visited {
+    color: #707070;
+}
+
+.developer-website:hover {
+}
+
+.developer-website:active {
+    color: #707070;
+}
+

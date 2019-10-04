@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Small video games developed by our team for Ludum Dare and other game jams.">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Boxed Meat Revolution | One Button Wizard</title>
+    
+  </head>
+  <body>
+    <div class="container px-0 main">
+      <!-- Title. -->
+      <header class="main-header pt-4 pb-2">
+        <div class="d-flex flex-column justify-content-between align-items-center">
+          <a class="main-header-title py-1 text-dark" href="/">Boxed Meat Revolution</a>
+          <div class="py-1">We make games.</div>
+        </div>
+      </header>
+      <!-- Navigation. -->
+      <nav class="main-navbar py-0">
+        <div class="d-flex flex-row flex-wrap justify-content-around align-items-start">
+          <a class="flex-grow-1 main-navbar-item text-muted" href="/">Home</a>
+          <a class="flex-grow-1 main-navbar-item text-muted" href="/games/">Games</a>
+          <a class="flex-grow-1 main-navbar-item text-muted" href="/about/">About</a>
+        </div>
+      </nav>
+      <!-- Body. -->
+      <main class="p-4">
+        <div class="page-title">One Button Wizard</div>
+
+
+<style scoped>
+  .embed-show-if {
+    display: none;
+  }
+  .embed-show-if-not {
+    display: inline-block;
+  }
+  .game-embedded-choose-size {
+    max-width: 1000px;
+    max-height: 680px;
+    width: auto;
+    height: auto;
+  }
+  @media only screen and (min-width: 1000px) {
+    .embed-show-if {
+      display: inline-block;
+    }
+    .embed-show-if-not {
+      display: none;
+    }
+    .game-embedded-choose-size {
+      min-width: 1000px;
+      min-height: 680px;
+      max-width: none;
+      max-height: none;
+    }
+  }
+</style>
+
+<div class="d-flex flex-column justify-content-center align-items-center">
+  <div class="game-embedded game-embedded-choose-size p-0 m-4">
+    <div id="game-embedded-iframe" class="game-embedded-iframe"></div>
+    <div id="game-embedded-play-button" class="embed-show-if game-embedded-play-strip">
+      <img src="/images/one-button-wizard1.png" alt="Screenshot of One Button Wizard." />
+      <button type="button" class="btn btn-default" onclick="loadGame()">
+        <img src="/images/play-triangle.png" />Play game<img src="/images/play-triangle.png" />
+      </button>
+    </div>
+    <div id="game-embedded-fail-button" class="embed-show-if-not game-embedded-fail-strip">
+      <img src="/images/one-button-wizard1.png" alt="Screenshot of One Button Wizard." />
+      <button type="button" class="btn btn-default" onclick="loadGame()">
+        <div class="d-flex flex-column">
+          <div class="game-embedded-fail-message">Screen is too small</div>
+          <div class="game-embedded-fail-message-details">click to try playing anyway</div>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+<div class="game-gallery">
+  <div class="d-flex flex-row justify-content-center align-items-center flex-nowrap">
+    <a href="/images/one-button-wizard1.png" target="_blank">
+      <img class="game-gallery-screenshot flex-grow-1 p-1" src="/images/one-button-wizard1.png" alt="Screenshot of One Button Wizard." />
+    </a>
+    <a href="/images/one-button-wizard2.png" target="_blank">
+      <img class="game-gallery-screenshot flex-grow-1 p-1" src="/images/one-button-wizard2.png" alt="Screenshot of One Button Wizard." />
+    </a>
+    <a href="/images/one-button-wizard3.png" target="_blank">
+      <img class="game-gallery-screenshot flex-grow-1 p-1" src="/images/one-button-wizard3.png" alt="Screenshot of One Button Wizard." />
+    </a>
+  </div>
+</div>
+<script type="text/javascript">
+  function loadGame() {
+    let divRemove = document.getElementById('game-embedded-iframe');
+    let playButton = document.getElementById('game-embedded-play-button');
+    let failStrip = document.getElementById('game-embedded-fail-button');
+    let embedParent = divRemove.parentElement;
+    playButton.remove();
+    failStrip.remove();
+    let iframe = document.createElement('iframe');
+    iframe.title = 'Frame embedding the game.';
+    iframe.width = 1000;
+    iframe.height = 680;
+    iframe.setAttribute('allowfullscreen', 'true');
+    iframe.setAttribute('allow', 'fullscreen');
+    iframe.src = '/embeds/one-button-wizard/index.html';
+    iframe.className = divRemove.className;
+    embedParent.replaceChild(iframe, divRemove);
+    iframe.onload = function() {
+      let embeddedDocument = iframe.contentDocument;
+      embeddedDocument.body.style['margin'] = '0';
+      embeddedDocument.body.style['padding'] = '0';
+      embeddedDocument.body.style['overflow'] = 'hidden';
+      iframe.height = Math.max(
+        embeddedDocument.body.scrollHeight,
+        embeddedDocument.documentElement.scrollHeight);
+      iframe.width = Math.max(
+        embeddedDocument.body.scrollWidth,
+        embeddedDocument.documentElement.scrollWidth);
+    }
+  }
+</script>
+
+<div class="d-flex flex-column justify-content-center align-items-center py-3">
+  <div class="game-name-small py-2">One Button Wizard</div>
+  <div class="game-description">
+    <div class="game-developers-container">
+      <span class="game-developers-item">Duane Byer</span><span class="game-developers-separator">, </span>
+      <span class="game-developers-item">Aidan Mahler</span><span class="game-developers-separator">, </span>
+      <span class="game-developers-item">George Shen</span><span class="game-developers-separator">, </span>
+      <span class="game-developers-item">Stacy Woods</span><span class="game-developers-separator">, </span>
+    </div>
+
+    <div class="game-jam-name">Ludum Dare 34: Two button controls</div>
+    <div class="game-date">December 14, 2015</div>
+
+    <div class="game-brief py-2">You are an all-powerful wizard with mastery over hundreds of elements, but for some reason you only want to use two of them. Create powerful spells by combining the two elements using only a single button. Fight many deadly monsters, each with their own puzzling attack patterns, or fight a friend in a wizard duel!</div>
+    <div class="game-instructions py-2">Use the Z key (for player 1) and M key (for player 2) to cast spells using any combination of up to three long and short taps. See the <a href='/images/one-button-wizard-cheat-sheet.png' target='_blank'>wizard cheat sheet</a> for a list of all possible spells.</div>
+
+    <p><a href=https:&#x2F;&#x2F;github.com&#x2F;boxedmeatrevolution&#x2F;one-button-wizard target="_blank">Source code (Processing JS)</a></p>
+  </div>
+</div>
+
+
+      </main>
+      <!-- Footer. -->
+      <footer class="main-footer">
+        <p>© Copyright 2019 Duane Byer.</p>
+      </footer>
+    </div>
+  </body>
+</html>
+

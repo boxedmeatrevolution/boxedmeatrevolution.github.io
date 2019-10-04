@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Small video games developed by our team for Ludum Dare and other game jams.">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Boxed Meat Revolution | Spacebank Heist</title>
+    
+  </head>
+  <body>
+    <div class="container px-0 main">
+      <!-- Title. -->
+      <header class="main-header pt-4 pb-2">
+        <div class="d-flex flex-column justify-content-between align-items-center">
+          <a class="main-header-title py-1 text-dark" href="/">Boxed Meat Revolution</a>
+          <div class="py-1">We make games.</div>
+        </div>
+      </header>
+      <!-- Navigation. -->
+      <nav class="main-navbar py-0">
+        <div class="d-flex flex-row flex-wrap justify-content-around align-items-start">
+          <a class="flex-grow-1 main-navbar-item text-muted" href="/">Home</a>
+          <a class="flex-grow-1 main-navbar-item text-muted" href="/games/">Games</a>
+          <a class="flex-grow-1 main-navbar-item text-muted" href="/about/">About</a>
+        </div>
+      </nav>
+      <!-- Body. -->
+      <main class="p-4">
+        <div class="page-title">Spacebank Heist</div>
+
+<div class="game-gallery">
+  <div class="d-flex flex-column justify-content-center align-items-center">
+    <img id="gallery-large-screenshot" class="game-gallery-large-screenshot p-2" src="/images/spacebank-heist1.png" alt="Screenshot of Spacebank Heist." />
+    <div class="d-flex flex-row justify-content-center align-items-center flex-nowrap">
+      <img class="game-gallery-screenshot flex-grow-1 p-1" src="/images/spacebank-heist1.png" alt="Screenshot of Spacebank Heist." onclick="gameGalleryClickHandler(event)" />
+      <img class="game-gallery-screenshot flex-grow-1 p-1" src="/images/spacebank-heist2.png" alt="Screenshot of Spacebank Heist." onclick="gameGalleryClickHandler(event)" />
+      <img class="game-gallery-screenshot flex-grow-1 p-1" src="/images/spacebank-heist3.png" alt="Screenshot of Spacebank Heist." onclick="gameGalleryClickHandler(event)" />
+    </div>
+  </div>
+</div>
+<script>
+  function gameGalleryClickHandler(event) {
+    let largeScreenshot = document.getElementById('gallery-large-screenshot');
+    largeScreenshot.src = event.target.src;
+  }
+</script>
+
+
+<div class="d-flex flex-column justify-content-center align-items-center py-3">
+  <div class="game-name-small py-2">Spacebank Heist</div>
+  <div class="game-description">
+    <div class="game-developers-container">
+      <span class="game-developers-item">Duane Byer</span><span class="game-developers-separator">, </span>
+      <span class="game-developers-item">Aidan Mahler</span><span class="game-developers-separator">, </span>
+      <span class="game-developers-item">George Shen</span><span class="game-developers-separator">, </span>
+      <span class="game-developers-item">Stacy Woods</span><span class="game-developers-separator">, </span>
+    </div>
+
+    <div class="game-jam-name">Ludum Dare 31: Entire game on one screen</div>
+    <div class="game-date">December 8, 2014</div>
+
+    <div class="game-brief py-2">On its opening moment, the Spacebank's designer declared it to be unheistable because of the relativistic time effects of its close orbit around a black hole. Someone did a heist in the very next millisecond, at 2.048791 unified solar time. Since then, the spacebank has been heisted over one billion times, regardless of the number of armed guards, bombs, trap mines, or missile launchers used to defend it. You are the latest heister, ready to make your space fortune, and it would be so embarassing if you were the first one to actually get caught.</div>
+    <div class="game-instructions py-2">Move with WASD or the arrow keys. Shoot with the left mouse button and drop bombs with the right mouse button, but don't escalate too quickly or the cops will show up. Dash away from their bullets with the space bar.</div>
+
+    <div class="game-downloads-container">
+      <ul>
+        <li><a href="/downloads/spacebank-heist-windows.zip">Windows</a></li>
+        <li><a href="/downloads/spacebank-heist-osx.app.zip">Mac OS X</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+      </main>
+      <!-- Footer. -->
+      <footer class="main-footer">
+        <p>© Copyright 2019 Duane Byer.</p>
+      </footer>
+    </div>
+  </body>
+</html>
+
