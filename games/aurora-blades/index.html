@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Small video games developed by our team for Ludum Dare and other game jams.">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Boxed Meat Revolution | Aurora Blades</title>
+    
+  </head>
+  <body>
+    <div class="container px-0 main">
+      <!-- Title. -->
+      <header class="main-header pt-4 pb-2">
+        <div class="d-flex flex-column justify-content-between align-items-center">
+          <a class="main-header-logo py-1 text-dark" href="/">Boxed Meat Revolution</a>
+          <div class="py-1">We make games.</div>
+        </div>
+      </header>
+      <!-- Navigation. -->
+      <nav class="main-navbar py-0">
+        <div class="d-flex flex-row flex-wrap justify-content-around align-items-start">
+          <a class="flex-grow-1 main-navbar-item text-muted" href="/">Home</a>
+          <a class="flex-grow-1 main-navbar-item text-muted" href="/games/">Games</a>
+          <a class="flex-grow-1 main-navbar-item text-muted" href="/about/">About</a>
+        </div>
+      </nav>
+      <!-- Body. -->
+      <main class="p-4">
+        <div class="page-title">Aurora Blades</div>
+
+<div class="game-gallery">
+  <div class="d-flex flex-column justify-content-center align-items-center">
+    <img id="gallery-large-screenshot" class="game-gallery-large-screenshot p-2" src="/images/aurora-blades1.png" alt="Screenshot of Aurora Blades." />
+    <div class="d-flex flex-row justify-content-center align-items-center flex-nowrap">
+      <img class="game-gallery-screenshot flex-grow-1 p-1" src="/images/aurora-blades1.png" alt="Screenshot of Aurora Blades." onclick="gameGalleryClickHandler(event)" />
+      <img class="game-gallery-screenshot flex-grow-1 p-1" src="/images/aurora-blades2.png" alt="Screenshot of Aurora Blades." onclick="gameGalleryClickHandler(event)" />
+      <img class="game-gallery-screenshot flex-grow-1 p-1" src="/images/aurora-blades3.png" alt="Screenshot of Aurora Blades." onclick="gameGalleryClickHandler(event)" />
+    </div>
+  </div>
+</div>
+<script>
+  function gameGalleryClickHandler(event) {
+    let largeScreenshot = document.getElementById('gallery-large-screenshot');
+    largeScreenshot.src = event.target.src;
+  }
+</script>
+
+
+<div class="d-flex flex-column justify-content-center align-items-center py-3">
+  <div class="game-name-small py-2">Aurora Blades</div>
+  <div class="game-description">
+    <div class="game-developers-container">
+      <span class="game-developers-item">Duane Byer</span><span class="game-developers-separator">, </span>
+      <span class="game-developers-item">Aidan Mahler</span><span class="game-developers-separator">, </span>
+      <span class="game-developers-item">Nikole McGregor</span><span class="game-developers-separator">, </span>
+      <span class="game-developers-item">George Shen</span><span class="game-developers-separator">, </span>
+    </div>
+
+    <div class="game-jam-name">Game Off 2019: Leaps and bounds</div>
+    <div class="game-date">November, 2019</div>
+
+    <div class="game-brief py-2">No one knows what caused the eternal winter to envelop the entire planet Earth. What people do know is that if you want to go to the corner store to get a loaf of bread, you have to navigate your way through a treacherous ice-field where one wrong step can leave you flat on your back, and once you get to the corner store you find out there isn't any bread because all the crops got frozen over, and furthermore you can't even get to the corner store at all because the rule of law has broken down and there are ice-skating hooligans all over the place, so before long you have to don your own skates and go skating around looking for seeds so you can grow your own bread once all this "eternal winter" nonsense blows over.</div>
+    <div class="game-instructions py-2">Move with the arrow keys. Jump with Z, skate with X, and dash with C (by default).</div>
+
+    <div class="game-downloads-container">
+      <ul>
+        <li>
+          <a href="/downloads/aurora-blades-itch.html" target="_blank">
+            Download
+            for
+            <span class="game-download-platforms-container">
+                <span class="game-download-platforms-item">Windows</span><span class="game-download-platforms-separator">, </span>
+                <span class="game-download-platforms-item">Mac OS X</span><span class="game-download-platforms-separator">, </span>
+                <span class="game-download-platforms-item">Linux</span><span class="game-download-platforms-separator">, </span>
+            </span>
+          </a>
+        </li>
+        <li><a href=https:&#x2F;&#x2F;github.com&#x2F;boxedmeatrevolution&#x2F;aurora-blades target="_blank">Source code (Godot)</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+      </main>
+      <!-- Footer. -->
+      <footer class="main-footer">
+        <p>© Copyright 2019 Duane Byer.</p>
+      </footer>
+    </div>
+  </body>
+</html>
+
