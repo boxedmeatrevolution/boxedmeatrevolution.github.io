@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Small video games developed by our team for Ludum Dare and other game jams.">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Boxed Meat Revolution | Cardboard People on Fire</title>
+    
+  </head>
+  <body>
+    <div class="container px-0 main">
+      <!-- Title. -->
+      <header class="main-header pt-4 pb-2">
+        <div class="d-flex flex-column justify-content-between align-items-center">
+          <a class="main-header-logo py-1 text-dark" href="/">Boxed Meat Revolution</a>
+          <div class="py-1">We make games.</div>
+        </div>
+      </header>
+      <!-- Navigation. -->
+      <nav class="main-navbar py-0">
+        <div class="d-flex flex-row flex-wrap justify-content-around align-items-start">
+          <a class="flex-grow-1 main-navbar-item text-muted" href="/">Home</a>
+          <a class="flex-grow-1 main-navbar-item text-muted" href="/games/">Games</a>
+          <a class="flex-grow-1 main-navbar-item text-muted" href="/about/">About</a>
+        </div>
+      </nav>
+      <!-- Body. -->
+      <main class="p-4">
+        <div class="page-title">Cardboard People on Fire</div>
+
+<div class="game-gallery">
+  <div class="d-flex flex-column justify-content-center align-items-center">
+    <img id="gallery-large-screenshot" class="game-gallery-large-screenshot p-2" src="/images/cardboard-people-on-fire1.png" alt="Screenshot of Cardboard People on Fire." />
+    <div class="d-flex flex-row justify-content-center align-items-center flex-nowrap">
+      <img class="game-gallery-screenshot flex-grow-1 p-1" src="/images/cardboard-people-on-fire1.png" alt="Screenshot of Cardboard People on Fire." onclick="gameGalleryClickHandler(event)" />
+      <img class="game-gallery-screenshot flex-grow-1 p-1" src="/images/cardboard-people-on-fire2.png" alt="Screenshot of Cardboard People on Fire." onclick="gameGalleryClickHandler(event)" />
+      <img class="game-gallery-screenshot flex-grow-1 p-1" src="/images/cardboard-people-on-fire3.png" alt="Screenshot of Cardboard People on Fire." onclick="gameGalleryClickHandler(event)" />
+    </div>
+  </div>
+</div>
+<script>
+  function gameGalleryClickHandler(event) {
+    let largeScreenshot = document.getElementById('gallery-large-screenshot');
+    largeScreenshot.src = event.target.src;
+  }
+</script>
+
+
+<div class="d-flex flex-column justify-content-center align-items-center py-3">
+  <div class="game-name-small py-2">Cardboard People on Fire</div>
+  <div class="game-description">
+    <div class="game-developers-container">
+      <span class="game-developers-item">Duane Byer</span><span class="game-developers-separator">, </span>
+      <span class="game-developers-item">Aidan Mahler</span><span class="game-developers-separator">, </span>
+      <span class="game-developers-item">Nikole McGregor</span><span class="game-developers-separator">, </span>
+      <span class="game-developers-item">George Shen</span><span class="game-developers-separator">, </span>
+    </div>
+
+    <div class="game-jam-name">Ludum Dare 50: Delay the inevitable</div>
+    <div class="game-date">April 4, 2022</div>
+
+    <div class="game-brief py-2">See the cardboard city. See the people catch fire. Listen to the music of the city, or sit by the surf and let the waves wash over you. The flamed ones suffer when on the ground. Extinguish them with your hose if you want. If not they will ascend. You can't win. Any game you imagine is in your head. There is only one truth: cardboard people are on fire.</div>
+    <div class="game-instructions py-2">Move with WASD or the arrow keys. Look around with the mouse. Shoot your water gun by clicking.</div>
+
+    <div class="game-downloads-container">
+      <ul>
+        <li>
+          <a href="/downloads/cardboard-people-on-fire-itch.html" target="_blank">
+            Download
+            for
+            <span class="game-download-platforms-container">
+                <span class="game-download-platforms-item">Windows</span><span class="game-download-platforms-separator">, </span>
+                <span class="game-download-platforms-item">Mac OS X</span><span class="game-download-platforms-separator">, </span>
+                <span class="game-download-platforms-item">Linux</span><span class="game-download-platforms-separator">, </span>
+            </span>
+          </a>
+        </li>
+        <li><a href=https:&#x2F;&#x2F;github.com&#x2F;boxedmeatrevolution&#x2F;cardboard-people-on-fire target="_blank">Source code (Unity)</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+      </main>
+      <!-- Footer. -->
+      <footer class="main-footer">
+        <p>© Copyright 2019 Duane Byer.</p>
+      </footer>
+    </div>
+  </body>
+</html>
+

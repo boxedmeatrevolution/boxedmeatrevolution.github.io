@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Small video games developed by our team for Ludum Dare and other game jams.">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Boxed Meat Revolution | Chess Hellevator</title>
+    
+  </head>
+  <body>
+    <div class="container px-0 main">
+      <!-- Title. -->
+      <header class="main-header pt-4 pb-2">
+        <div class="d-flex flex-column justify-content-between align-items-center">
+          <a class="main-header-logo py-1 text-dark" href="/">Boxed Meat Revolution</a>
+          <div class="py-1">We make games.</div>
+        </div>
+      </header>
+      <!-- Navigation. -->
+      <nav class="main-navbar py-0">
+        <div class="d-flex flex-row flex-wrap justify-content-around align-items-start">
+          <a class="flex-grow-1 main-navbar-item text-muted" href="/">Home</a>
+          <a class="flex-grow-1 main-navbar-item text-muted" href="/games/">Games</a>
+          <a class="flex-grow-1 main-navbar-item text-muted" href="/about/">About</a>
+        </div>
+      </nav>
+      <!-- Body. -->
+      <main class="p-4">
+        <div class="page-title">Chess Hellevator</div>
+
+
+<style scoped>
+  .embed-show-if {
+    display: none;
+  }
+  .embed-show-if-not {
+    display: inline-block;
+  }
+  .game-embedded-choose-size {
+    max-width: 960px;
+    max-height: 600px;
+    width: auto;
+    height: auto;
+  }
+  @media only screen and (min-width: 960px) {
+    .embed-show-if {
+      display: inline-block;
+    }
+    .embed-show-if-not {
+      display: none;
+    }
+    .game-embedded-choose-size {
+      min-width: 960px;
+      min-height: 600px;
+      max-width: none;
+      max-height: none;
+    }
+  }
+</style>
+
+<div class="d-flex flex-column justify-content-center align-items-center">
+  <div class="game-embedded game-embedded-choose-size p-0 m-4">
+    <div id="game-embedded-iframe" class="game-embedded-iframe"></div>
+    <div id="game-embedded-play-button" class="embed-show-if game-embedded-play-strip">
+      <img src="/images/chesstris1.png" alt="Screenshot of Chess Hellevator." />
+      <button type="button" class="btn btn-default" onclick="loadGame()">
+        <img src="/images/play-triangle.png" />Play game<img src="/images/play-triangle.png" />
+      </button>
+    </div>
+    <div id="game-embedded-fail-button" class="embed-show-if-not game-embedded-fail-strip">
+      <img src="/images/chesstris1.png" alt="Screenshot of Chess Hellevator." />
+      <button type="button" class="btn btn-default" onclick="loadGame()">
+        <div class="d-flex flex-column">
+          <div class="game-embedded-fail-message">Screen is too small</div>
+          <div class="game-embedded-fail-message-details">click to try playing anyway</div>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+<div class="game-gallery">
+  <div class="d-flex flex-row justify-content-center align-items-center flex-nowrap">
+    <a href="/images/chesstris1.png" target="_blank">
+      <img class="game-gallery-screenshot flex-grow-1 p-1" src="/images/chesstris1.png" alt="Screenshot of Chess Hellevator." />
+    </a>
+    <a href="/images/chesstris2.png" target="_blank">
+      <img class="game-gallery-screenshot flex-grow-1 p-1" src="/images/chesstris2.png" alt="Screenshot of Chess Hellevator." />
+    </a>
+  </div>
+</div>
+<script type="text/javascript">
+  function loadGame() {
+    let divRemove = document.getElementById('game-embedded-iframe');
+    let playButton = document.getElementById('game-embedded-play-button');
+    let failStrip = document.getElementById('game-embedded-fail-button');
+    let embedParent = divRemove.parentElement;
+    playButton.remove();
+    failStrip.remove();
+    let iframe = document.createElement('iframe');
+    iframe.title = 'Frame embedding the game.';
+    iframe.width = 960;
+    iframe.height = 600;
+    iframe.setAttribute('allowfullscreen', 'true');
+    iframe.setAttribute('allow', 'fullscreen');
+    iframe.src = '/embeds/chesstris/index.html';
+    iframe.className = divRemove.className;
+    embedParent.replaceChild(iframe, divRemove);
+    iframe.onload = function() {
+      let embeddedDocument = iframe.contentDocument;
+      embeddedDocument.body.style['margin'] = '0';
+      embeddedDocument.body.style['padding'] = '0';
+      embeddedDocument.body.style['overflow'] = 'hidden';
+      iframe.height = Math.max(
+        embeddedDocument.body.scrollHeight,
+        embeddedDocument.documentElement.scrollHeight);
+      iframe.width = Math.max(
+        embeddedDocument.body.scrollWidth,
+        embeddedDocument.documentElement.scrollWidth);
+    }
+  }
+</script>
+
+<div class="d-flex flex-column justify-content-center align-items-center py-3">
+  <div class="game-name-small py-2">Chess Hellevator</div>
+  <div class="game-description">
+    <div class="game-developers-container">
+      <span class="game-developers-item">Duane Byer</span><span class="game-developers-separator">, </span>
+      <span class="game-developers-item">Aidan Mahler</span><span class="game-developers-separator">, </span>
+      <span class="game-developers-item">Nikole McGregor</span><span class="game-developers-separator">, </span>
+      <span class="game-developers-item">George Shen</span><span class="game-developers-separator">, </span>
+    </div>
+
+    <div class="game-jam-name">Ludum Dare 48: Deeper and deeper</div>
+    <div class="game-date">April 26, 2021</div>
+
+    <div class="game-brief py-2">Journey to hell and back as a pawn with an unholy power.</div>
+    <div class="game-instructions py-2">Choose one of three random chess moves each turn. Click all of the elevator buttons to go deeper. Kill an enemy hell-pawn at the same time as clicking a button to get a bonus move. Bonus moves are very important for clearing later levels, so use them wisely.</div>
+
+    <div class="game-downloads-container">
+      <ul>
+        <li><a href=https:&#x2F;&#x2F;github.com&#x2F;boxedmeatrevolution&#x2F;chesstris target="_blank">Source code (Godot)</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+      </main>
+      <!-- Footer. -->
+      <footer class="main-footer">
+        <p>© Copyright 2019 Duane Byer.</p>
+      </footer>
+    </div>
+  </body>
+</html>
+
