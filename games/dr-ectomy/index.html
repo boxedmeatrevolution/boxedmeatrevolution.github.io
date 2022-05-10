@@ -4,37 +4,35 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Small video games developed by our team for Ludum Dare and other game jams.">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="/styles/styles.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Boxed Meat Revolution | Dr. Ectomy</title>
     
   </head>
   <body>
-    <div class="container px-0 main">
+    <div class="body-container">
       <!-- Title. -->
-      <header class="main-header pt-4 pb-2">
-        <a class="text-decoration-none" href="/">
-          <div class="d-flex flex-row justify-content-center align-items-center">
-            <div>
-              <img class="px-2" src="/images/pig.png" height="65.0rem" />
-            </div>
-            <div class="d-flex flex-column justify-content-center align-items-center">
-              <div class="main-header-logo py-1 text-dark">Boxed Meat Revolution</div>
-              <div class="py-1 text-dark">Tiny games for you to play.</div>
+      <header>
+        <a class="link-logo" href="/">
+          <div class="logo-container">
+            <img class="emblem" src="/images/pig.png" height="65.0rem" />
+            <div class="wordmark-container">
+              <div class="wordmark-name">Boxed Meat Revolution</div>
+              <div class="wordmark-slogan">Tiny games for you to play.</div>
             </div>
           </div>
         </a>
       </header>
       <!-- Navigation. -->
-      <nav class="main-navbar py-0">
-        <div class="d-flex flex-row flex-wrap justify-content-around align-items-start">
-          <a class="flex-grow-1 main-navbar-item text-muted" href="/">Home</a>
-          <a class="flex-grow-1 main-navbar-item text-muted" href="/games/">Games</a>
-          <a class="flex-grow-1 main-navbar-item text-muted" href="/about/">About</a>
+      <nav>
+        <div class="nav-container">
+          <a class="nav-item" href="/">Home</a>
+          <a class="nav-item" href="/games/">Games</a>
+          <a class="nav-item" href="/about/">About</a>
         </div>
       </nav>
-      <!-- Body. -->
-      <main class="p-4">
+      <!-- Main. -->
+      <main>
         
 <style scoped>
   .embed-show-if {
@@ -43,7 +41,7 @@
   .embed-show-if-not {
     display: inline-block;
   }
-  .game-embedded-choose-size {
+  .embed-choose-size {
     max-width: 1280px;
     max-height: 720px;
     width: auto;
@@ -56,7 +54,7 @@
     .embed-show-if-not {
       display: none;
     }
-    .game-embedded-choose-size {
+    .embed-choose-size {
       min-width: 1280px;
       min-height: 720px;
       max-width: none;
@@ -64,51 +62,42 @@
     }
   }
 </style>
-
-<div class="d-flex flex-column justify-content-center align-items-center">
-  <div class="game-embedded game-embedded-choose-size p-0 m-4">
-    <div id="game-embedded-iframe" class="game-embedded-iframe"></div>
-    <div id="game-embedded-play-button" class="embed-show-if game-embedded-play-strip">
+<div class="gallery-container">
+  <div class="embed embed-choose-size">
+    <div id="embed-iframe" class="embed-iframe"></div>
+    <div id="embed-play-button" class="embed-show-if embed-play-strip">
       <img src="/images/dr-ectomy1.png" alt="Screenshot of Dr. Ectomy." />
-      <button type="button" class="btn btn-default" onclick="loadGame()">
-        <img src="/images/play-triangle.png" />Play game<img src="/images/play-triangle.png" />
+      <button class="embed-play-button" type="button" onclick="loadGame()">
+        <img class="embed-play-button-icon" src="/images/play-triangle.png" />
+        <div class="embed-play-button-text">Play game</div>
+        <img class="embed-play-button-icon" src="/images/play-triangle.png" />
       </button>
     </div>
-    <div id="game-embedded-fail-button" class="embed-show-if-not game-embedded-fail-strip">
+    <div id="embed-fail-button" class="embed-show-if-not embed-fail-strip">
       <img src="/images/dr-ectomy1.png" alt="Screenshot of Dr. Ectomy." />
-      <button type="button" class="btn btn-default" onclick="loadGame()">
-        <div class="d-flex flex-column">
-          <div class="game-embedded-fail-message">Screen is too small</div>
-          <div class="game-embedded-fail-message-details">click to try playing anyway</div>
-        </div>
+      <button class="embed-fail-button" type="button" onclick="loadGame()">
+        <div class="embed-fail-message">Screen is too small</div>
+        <div class="embed-fail-message-details">click to try playing anyway</div>
       </button>
     </div>
   </div>
-</div>
-<div class="game-gallery">
-  <div class="d-flex flex-row justify-content-center align-items-center flex-nowrap">
-    <div>
-      <a href="/images/dr-ectomy1.png" target="_blank">
-        <img class="game-gallery-screenshot flex-grow-1 p-1" src="/images/dr-ectomy1.png" alt="Screenshot of Dr. Ectomy." />
-      </a>
-    </div>
-    <div>
-      <a href="/images/dr-ectomy2.png" target="_blank">
-        <img class="game-gallery-screenshot flex-grow-1 p-1" src="/images/dr-ectomy2.png" alt="Screenshot of Dr. Ectomy." />
-      </a>
-    </div>
-    <div>
-      <a href="/images/dr-ectomy3.png" target="_blank">
-        <img class="game-gallery-screenshot flex-grow-1 p-1" src="/images/dr-ectomy3.png" alt="Screenshot of Dr. Ectomy." />
-      </a>
-    </div>
+  <div class="gallery-reel-container">
+    <a class="gallery-screenshot" href="/images/dr-ectomy1.png" target="_blank">
+      <img style="width:100%;" src="/images/dr-ectomy1.png" alt="Screenshot of Dr. Ectomy." />
+    </a>
+    <a class="gallery-screenshot" href="/images/dr-ectomy2.png" target="_blank">
+      <img style="width:100%;" src="/images/dr-ectomy2.png" alt="Screenshot of Dr. Ectomy." />
+    </a>
+    <a class="gallery-screenshot" href="/images/dr-ectomy3.png" target="_blank">
+      <img style="width:100%;" src="/images/dr-ectomy3.png" alt="Screenshot of Dr. Ectomy." />
+    </a>
   </div>
 </div>
 <script type="text/javascript">
   function loadGame() {
-    let divRemove = document.getElementById('game-embedded-iframe');
-    let playButton = document.getElementById('game-embedded-play-button');
-    let failStrip = document.getElementById('game-embedded-fail-button');
+    let divRemove = document.getElementById('embed-iframe');
+    let playButton = document.getElementById('embed-play-button');
+    let failStrip = document.getElementById('embed-fail-button');
     let embedParent = divRemove.parentElement;
     playButton.remove();
     failStrip.remove();
@@ -136,45 +125,41 @@
   }
 </script>
 
-<div class="d-flex flex-column justify-content-center align-items-center py-3">
-  <div class="game-name-small py-2">Dr. Ectomy</div>
-  <div class="game-description">
-    <div class="game-developers-container">
-      <span class="game-developers-item">Duane Byer</span><span class="game-developers-separator">, </span>
-      <span class="game-developers-item">Aidan Mahler</span><span class="game-developers-separator">, </span>
-      <span class="game-developers-item">Nikole McGregor</span><span class="game-developers-separator">, </span>
-    </div>
+<div class="game-text-container">
+  <div class="game-name">Dr. Ectomy</div>
+  <ul class="game-developers-container">
+    <li class="game-developers-item">Duane Byer</li>
+    <li class="game-developers-item">Aidan Mahler</li>
+    <li class="game-developers-item">Nikole McGregor</li>
+  </ul>
 
-    <div class="game-jam-name">Ludum Dare 44: Your life is currency</div>
-    <div class="game-date">April 29, 2019</div>
+  <div class="game-jam-name">Ludum Dare 44: Your life is currency</div>
+  <div class="game-date">April 29, 2019</div>
 
-    <div class="game-brief py-2">You are a surgeon: expert in organ removals, replacements, and rearrangement. Your clientele are strange folk with unique ailments. Survivors of your operations pay top dollar, but one mistake and your reputation will be tarnished. "Your life is my currency," you tell each one as they lie down on the table. Anesthesia takes their consciousness. The last thing they see is you looming above, sharp scissors glistening in your hand...</div>
-    <div class="game-instructions py-2">Your clipboard describes the goal of each operation. Left click once to pick up an organ, and left click again to place it down. Right click (or CTRL) while holding an organ to rotate it. Don't let organs sit on your operating table for too long, or they might die.</div>
+  <div class="game-brief">You are a surgeon: expert in organ removals, replacements, and rearrangement. Your clientele are strange folk with unique ailments. Survivors of your operations pay top dollar, but one mistake and your reputation will be tarnished. "Your life is my currency," you tell each one as they lie down on the table. Anesthesia takes their consciousness. The last thing they see is you looming above, sharp scissors glistening in your hand...</div>
+  <div class="game-instructions">Your clipboard describes the goal of each operation. Left click once to pick up an organ, and left click again to place it down. Right click (or CTRL) while holding an organ to rotate it. Don't let organs sit on your operating table for too long, or they might die.</div>
 
-    <div class="game-downloads-container">
-      <ul>
-        <li>
-          <a href="/downloads/dr-ectomy-itch.html" target="_blank">
-            Download
-            for
-            <span class="game-download-platforms-container">
-                <span class="game-download-platforms-item">Windows</span><span class="game-download-platforms-separator">, </span>
-                <span class="game-download-platforms-item">Linux</span><span class="game-download-platforms-separator">, </span>
-            </span>
-          </a>
-        </li>
-        <li><a href=https&#x2F;&#x2F;github.com&#x2F;boxedmeatrevolution&#x2F;dr-ectomy target="_blank">Source code (Unity)</a></li>
-      </ul>
-    </div>
-  </div>
+  <ul class="game-downloads-container">
+    <li class="game-downloads-item">
+      <a href="/downloads/dr-ectomy-itch.html" target="_blank">
+        Download
+        for
+        <span class="game-download-platforms-container">
+            <span class="game-download-platforms-item">Windows</span><span class="game-download-platforms-separator">, </span>
+            <span class="game-download-platforms-item">Linux</span><span class="game-download-platforms-separator">, </span>
+        </span>
+      </a>
+    </li>
+    <li class="game-downloads-item">
+      <a href=https&#x2F;&#x2F;github.com&#x2F;boxedmeatrevolution&#x2F;dr-ectomy target="_blank">Source code (Unity)</a>
+    </li>
+  </ul>
 </div>
 
 
       </main>
       <!-- Footer. -->
-      <footer class="main-footer">
-        <p>© Copyright 2019 Duane Byer.</p>
-      </footer>
+      <footer>© Copyright 2019 Duane Byer.</footer>
     </div>
   </body>
 </html>

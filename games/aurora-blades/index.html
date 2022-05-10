@@ -4,102 +4,107 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Small video games developed by our team for Ludum Dare and other game jams.">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="/styles/styles.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Boxed Meat Revolution | Aurora Blades</title>
     
   </head>
   <body>
-    <div class="container px-0 main">
+    <div class="body-container">
       <!-- Title. -->
-      <header class="main-header pt-4 pb-2">
-        <a class="text-decoration-none" href="/">
-          <div class="d-flex flex-row justify-content-center align-items-center">
-            <div>
-              <img class="px-2" src="/images/pig.png" height="65.0rem" />
-            </div>
-            <div class="d-flex flex-column justify-content-center align-items-center">
-              <div class="main-header-logo py-1 text-dark">Boxed Meat Revolution</div>
-              <div class="py-1 text-dark">Tiny games for you to play.</div>
+      <header>
+        <a class="link-logo" href="/">
+          <div class="logo-container">
+            <img class="emblem" src="/images/pig.png" height="65.0rem" />
+            <div class="wordmark-container">
+              <div class="wordmark-name">Boxed Meat Revolution</div>
+              <div class="wordmark-slogan">Tiny games for you to play.</div>
             </div>
           </div>
         </a>
       </header>
       <!-- Navigation. -->
-      <nav class="main-navbar py-0">
-        <div class="d-flex flex-row flex-wrap justify-content-around align-items-start">
-          <a class="flex-grow-1 main-navbar-item text-muted" href="/">Home</a>
-          <a class="flex-grow-1 main-navbar-item text-muted" href="/games/">Games</a>
-          <a class="flex-grow-1 main-navbar-item text-muted" href="/about/">About</a>
+      <nav>
+        <div class="nav-container">
+          <a class="nav-item" href="/">Home</a>
+          <a class="nav-item" href="/games/">Games</a>
+          <a class="nav-item" href="/about/">About</a>
         </div>
       </nav>
-      <!-- Body. -->
-      <main class="p-4">
-        <div class="game-gallery">
-  <div class="d-flex flex-column justify-content-center align-items-center">
-    <img id="gallery-large-screenshot" class="game-gallery-large-screenshot p-2" src="/images/aurora-blades1.png" alt="Screenshot of Aurora Blades." />
-    <div class="d-flex flex-row justify-content-center align-items-center flex-nowrap">
-      <div>
-        <img class="game-gallery-screenshot flex-grow-1 p-1" src="/images/aurora-blades1.png" alt="Screenshot of Aurora Blades." onclick="gameGalleryClickHandler(event)" />
-      </div>
-      <div>
-        <img class="game-gallery-screenshot flex-grow-1 p-1" src="/images/aurora-blades2.png" alt="Screenshot of Aurora Blades." onclick="gameGalleryClickHandler(event)" />
-      </div>
-      <div>
-        <img class="game-gallery-screenshot flex-grow-1 p-1" src="/images/aurora-blades3.png" alt="Screenshot of Aurora Blades." onclick="gameGalleryClickHandler(event)" />
-      </div>
+      <!-- Main. -->
+      <main>
+        <div class="gallery-container">
+  <img id="gallery-large-screenshot" class="gallery-large-screenshot" src="/images/aurora-blades1.png" alt="Screenshot of Aurora Blades." />
+  <div id="gallery-reel-container" class="gallery-reel-container">
+    <div class="gallery-screenshot">
+      <img src="/images/aurora-blades1.png" alt="Screenshot of Aurora Blades." onclick="gameGalleryClickHandler(event)" />
+    </div>
+    <div class="gallery-screenshot">
+      <img src="/images/aurora-blades2.png" alt="Screenshot of Aurora Blades." onclick="gameGalleryClickHandler(event)" />
+    </div>
+    <div class="gallery-screenshot">
+      <img src="/images/aurora-blades3.png" alt="Screenshot of Aurora Blades." onclick="gameGalleryClickHandler(event)" />
     </div>
   </div>
 </div>
-<script>
+<script type="text/javascript">
+  let largeScreenshot = document.getElementById('gallery-large-screenshot');
+  let siblings = document.getElementById("gallery-reel-container").children;
+  for (let i = 0; i < siblings.length; i++) {
+    if (largeScreenshot.src === siblings[i].children[0].src) {
+      siblings[i].classList.add("gallery-screenshot-selected");
+    }
+  }
+
   function gameGalleryClickHandler(event) {
     let largeScreenshot = document.getElementById('gallery-large-screenshot');
     largeScreenshot.src = event.target.src;
+    let siblings = event.target.parentElement.parentElement.children;
+    for (let i = 0; i < siblings.length; i++) {
+      siblings[i].classList.remove("gallery-screenshot-selected");
+    }
+    event.target.parentElement.classList.add("gallery-screenshot-selected");
   }
 </script>
 
 
-<div class="d-flex flex-column justify-content-center align-items-center py-3">
-  <div class="game-name-small py-2">Aurora Blades</div>
-  <div class="game-description">
-    <div class="game-developers-container">
-      <span class="game-developers-item">Duane Byer</span><span class="game-developers-separator">, </span>
-      <span class="game-developers-item">Aidan Mahler</span><span class="game-developers-separator">, </span>
-      <span class="game-developers-item">Nikole McGregor</span><span class="game-developers-separator">, </span>
-      <span class="game-developers-item">George Shen</span><span class="game-developers-separator">, </span>
-    </div>
+<div class="game-text-container">
+  <div class="game-name">Aurora Blades</div>
+  <ul class="game-developers-container">
+    <li class="game-developers-item">Duane Byer</li>
+    <li class="game-developers-item">Aidan Mahler</li>
+    <li class="game-developers-item">Nikole McGregor</li>
+    <li class="game-developers-item">George Shen</li>
+  </ul>
 
-    <div class="game-jam-name">Game Off 2019: Leaps and bounds</div>
-    <div class="game-date">November, 2019</div>
+  <div class="game-jam-name">Game Off 2019: Leaps and bounds</div>
+  <div class="game-date">November, 2019</div>
 
-    <div class="game-brief py-2">After a kilometer-sized comet hit, the whole earth was covered in slippery-smooth ice. Now if you take one wrong step, you'll end up flat on your back. All the old money became worthless—now momentum is the only currency. Collecting all those old-earth seeds might be the only way to have a future worth living in. You'll do anything. It's not that you won't stop; you can't stop. You don't know how.</div>
-    <div class="game-instructions py-2">Move with the arrow keys. Jump with Z, skate with X, and dash with C (by default).</div>
+  <div class="game-brief">After a kilometer-sized comet hit, the whole earth was covered in slippery-smooth ice. Now if you take one wrong step, you'll end up flat on your back. All the old money became worthless—now momentum is the only currency. Collecting all those old-earth seeds might be the only way to have a future worth living in. You'll do anything. It's not that you won't stop; you can't stop. You don't know how.</div>
+  <div class="game-instructions">Move with the arrow keys. Jump with Z, skate with X, and dash with C (by default).</div>
 
-    <div class="game-downloads-container">
-      <ul>
-        <li>
-          <a href="/downloads/aurora-blades-itch.html" target="_blank">
-            Download
-            for
-            <span class="game-download-platforms-container">
-                <span class="game-download-platforms-item">Windows</span><span class="game-download-platforms-separator">, </span>
-                <span class="game-download-platforms-item">Mac OS X</span><span class="game-download-platforms-separator">, </span>
-                <span class="game-download-platforms-item">Linux</span><span class="game-download-platforms-separator">, </span>
-            </span>
-          </a>
-        </li>
-        <li><a href=https:&#x2F;&#x2F;github.com&#x2F;boxedmeatrevolution&#x2F;aurora-blades target="_blank">Source code (Godot)</a></li>
-      </ul>
-    </div>
-  </div>
+  <ul class="game-downloads-container">
+    <li class="game-downloads-item">
+      <a href="/downloads/aurora-blades-itch.html" target="_blank">
+        Download
+        for
+        <span class="game-download-platforms-container">
+            <span class="game-download-platforms-item">Windows</span><span class="game-download-platforms-separator">, </span>
+            <span class="game-download-platforms-item">Mac OS X</span><span class="game-download-platforms-separator">, </span>
+            <span class="game-download-platforms-item">Linux</span><span class="game-download-platforms-separator">, </span>
+        </span>
+      </a>
+    </li>
+    <li class="game-downloads-item">
+      <a href=https:&#x2F;&#x2F;github.com&#x2F;boxedmeatrevolution&#x2F;aurora-blades target="_blank">Source code (Godot)</a>
+    </li>
+  </ul>
 </div>
 
 
       </main>
       <!-- Footer. -->
-      <footer class="main-footer">
-        <p>© Copyright 2019 Duane Byer.</p>
-      </footer>
+      <footer>© Copyright 2019 Duane Byer.</footer>
     </div>
   </body>
 </html>
